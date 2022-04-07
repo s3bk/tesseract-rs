@@ -9,7 +9,11 @@ license       = "MIT"
 keywords      = ["tesseract", "OCR", "bindings"]
 categories    = ["api-bindings", "multimedia::images"]
 
+[features]
+api_41 = ["tesseract-plumbing/api_41"]
+default = ["api_41"]
+
 [dependencies]
 tesseract-sys = "~0.5"
-tesseract-plumbing = "~0.6"
+tesseract-plumbing = { git = "https://github.com/s3bk/tesseract-plumbing", default-features = false }
 thiserror = "1.0"
