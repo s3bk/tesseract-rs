@@ -183,6 +183,7 @@ impl Tesseract {
     /// Get the text encoded as HTML with bounding box tags
     ///
     /// See [img.html](../img.html) for an example.
+    #[cfg(feature="api_41")]
     pub fn get_hocr_text(
         &mut self,
         page: c_int,
@@ -198,6 +199,7 @@ impl Tesseract {
     /// Get the text encoded as TSV, including bounding boxes, confidence
     ///
     /// See [char* TessBaseAPI::GetTSVText](https://github.com/tesseract-ocr/tesseract/blob/cdebe13d81e2ad2a83be533886750f5491b25262/src/api/baseapi.cpp#L1398)
+    #[cfg(feature="api_41")]
     pub fn get_tsv_text(
         &mut self,
         page: c_int,
