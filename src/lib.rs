@@ -209,6 +209,10 @@ impl Tesseract {
             .to_string_lossy()
             .into_owned())
     }
+
+    pub fn base_api(&self) -> &plumbing::TessBaseApi {
+        &self.0
+    }
 }
 
 pub fn ocr(filename: &str, language: &str) -> Result<String, TesseractError> {
