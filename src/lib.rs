@@ -215,6 +215,9 @@ impl Tesseract {
     pub fn base_api(&self) -> &plumbing::TessBaseApi {
         &self.0
     }
+    pub fn base_api_mut(&mut self) -> &mut plumbing::TessBaseApi {
+        &mut self.0
+    }
 }
 
 pub fn ocr(filename: &str, language: &str) -> Result<String, TesseractError> {
